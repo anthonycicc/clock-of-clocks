@@ -1,0 +1,15 @@
+h1 CSS only clock of clocks
+
+p Fun experiment inspired by 
+  a(href='https://goo.gl/49JZdd', target='_blank') this
+
+input(type="checkbox", id="animation-trigger")
+label(for="animation-trigger", data-trigger-on="Start" data-trigger-off="Pause")
+
+div.clock
+  - types = ["--min-tens no--sec-tens", "--min-units", "--colon", "--sec-tens", "--sec-units"]
+
+   each item in types
+      div(class="no no" + item)
+        - for (var x = 0; x < 30; x++)
+          div
